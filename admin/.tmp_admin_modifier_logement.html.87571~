@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../style/stylesheets/admin.css"/>
+<title>Panneau d'administration du logement</title>
+</head>
+<body>
+<div id="apDiv1"><img src="images/arriereplan.png" width="772" height="544" align="absmiddle" /></div>
+<!-- apDiv3 cadre blanc du milieur le body-->
+<div id="apDiv3"><div align="center"><div align="center">Modifier un logement<br />{INFO}</div>
+<br />
+<table>
+<tr>
+<th>Champ</th><th>Valeur</th>
+<tr>
+<form method="post" action="{ACTION}">
+<td>*ID</td><td><input type="text" maxlength="2" name="id" value="{IDEN}" {READONLY} /></td><td style=visibility:{HIDDEN}>{ID}</td>
+</tr>
+</tr>
+<td>*img url</td><td><input type="text" maxlength="30" name="img" value="{IMG}"/></td><td style=visibility:{HIDDEN}>{IM}</td>
+<tr>
+<td>*Adresse</td><td><input type="text" maxlength="20" name="adresse" value="{ADR}"/></td><td style=visibility:{HIDDEN}>{AD}</td>
+</tr>
+<tr>
+<td>*Localité</td><td><input type="text" maxlength="20" name="localite" value="{LOC}"/></td><td style=visibility:{HIDDEN}>{LO}</td>
+</tr>
+<td>*CP</td><td><input type="text" maxlength="6" name="codepostal" value="{CODEP}"/></td><td style=visibility:{HIDDEN}>{CP}</td>
+<tr>
+<td>*Prix</td><td><input type="text" maxlength="4" name="prix" value="{PRI}"/></td><td style=visibility:{HIDDEN}>{PR}</td>
+</tr>
+<td>*Caution</td><td><input type="text" maxlength="4" name="caution" value="{CAU}"/></td><td style=visibility:{HIDDEN}>{CA}</td>
+<tr>
+<td>*Nombre de lit</td><td><div align="center"><input type="radio" name="{NBRLIT2}" value="2" {LIT2} />2<input type="radio" name="{NBRLIT3}" value="3" {LIT3} />3<input type="radio" name="{NBRLIT4}" value="4" {LIT4} />4</div></td><td style=visibility:{HIDDEN}>{NL}</td>
+</tr>
+</table>
+<div align="center">
+<br />
+<input type="submit" value="Modifier" /></form></div>
+</div></div>
+</body>
+</html>

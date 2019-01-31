@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../style/stylesheets/admin.css"/>
+<title>Gerer Membre</title>
+</head>
+<body>
+<div id="apDiv1"><img src="images/arriereplan.png" width="772" height="544" align="absmiddle" /></div>
+<!-- apDiv3 cadre blanc du milieur le body-->
+<div id="apDiv3">
+	<div align="center">
+		<p>Modifier les membres</p>
+		<span style=visibility:{HIDDENSELECT}>
+			<form method="post" action="#">
+				Entrez un matricule : <input type="text" name="mat"/>
+				<input type="submit" name="select" value="Sélectionner"/>
+			</form>
+			OU 
+			<form method="post" action="#">
+				Selectionner un membre :
+				<select name="mat">
+					<!-- BEGIN OP -->
+					<option value="{OP.MAT}">{OP.RESP} - {OP.NOM} - {OP.PRENOM} - {OP.MAT}</option>
+					<!-- END OP -->
+				</select>
+				<input type="submit" name="select" value="Sélectionner"/>
+			</form>
+		</span>
+		<table>
+				<td style="border:0px;">
+					<div style=visibility:{HIDDENMSGBOX} class="{BOXTYPE}">{MSG}</div>
+				</td>
+			</table>
+		<form method="post" action="#" style=visibility:{HIDDENFORMMOD}>
+			<table>
+				<tr>
+					<th colspan="2">Modifier membre</th>
+				</tr>
+				<tr>
+					<td>Matricule</td>
+					<td><input type="hidden" name="mat_etud" value="{MAT}" />{MAT}</td>
+				</tr>
+				<tr>
+					<td>Nom</td>
+					<td><input type="text" name="nom_etud" value="{NOM}" MAXLENGTH="15" /></td>
+				</tr>
+				<tr>
+					<td>Prénom</td>
+					<td><input type="text" name="prenom_etud" value="{PRENOM}" MAXLENGTH="15"/></td>
+				</tr>
+				<tr>
+					<td>Rue</td>
+					<td><input type="text" name="rue_etud" value="{RUE}" MAXLENGTH="50"/></td>
+				</tr>
+				<tr>
+					<td>Ville</td>
+					<td><input type="text" name="ville_etud" value="{VILLE}" MAXLENGTH="20"/></td>
+				</tr>
+				<tr>
+					<td>Code postal</td>
+					<td><input type="text" name="cp_etud" value="{CODEPOSTAL}" MAXLENGTH="11"/></td>
+				</tr>
+				<tr>
+					<td>Téléphone</td>
+					<td><input type="text" name="tel_etud" value="{TELEPHONE}" MAXLENGTH="11"/></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" name="email_etud" value="{EMAIL}" MAXLENGTH="25"/></td>
+				</tr>
+				<tr>
+					<td>Mot de passe</td>
+					<td><input type="password" name="mdp_etud" value="{MOTDEPASSE}" MAXLENGTH="15"/></td>
+				</tr>
+				<tr>
+					<td>Date de naissance</td>
+					<td><input type="text" name="dnaiss_etud" value="{DATENAISS}" /></td>
+				</tr>
+				<tr>
+					<td>Section</td>
+					<td><input type="text" name="section_etud" value="{SECTION}" MAXLENGTH="4"/></td>
+				</tr>
+				<tr>
+					<td> Responsable</td>
+					<td>
+						<input type="radio" {MEMBRE} value="Etudiant" name="responsable" />Etudiant
+						<input type="radio" {COOP} value="Coopérateur" name="responsable" />Coopérateur
+						<input type="radio" {GEST} value="Gestionnaire" name="responsable" />Gestionnaire
+					</td>
+				</tr>
+			</table>
+			<input type="submit" name="modifier" value="Modifier"/>
+			<form method="post" action="modifier_membre.php" style=visibility:{HIDDENFORMMOD}>
+				<input type="submit" value="Annuler"/>
+			</form>
+		</form>
+		
+	</div>
+</div>
+</body>
+</html>

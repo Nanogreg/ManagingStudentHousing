@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="../style/stylesheets/admin.css"/>
+<title>Panneau d'administration du logement</title>
+</head>
+<body>
+<div id="apDiv1"><img src="images/arriereplan.png" width="772" height="544" align="absmiddle" /></div>
+<!-- apDiv3 cadre blanc du milieur le body-->
+<div id="apDiv3"><div align="center">Rechercher un étudiant</div>
+<table class="tabRecherche">
+<tr>
+<th>Chercher par</th>
+<th>Entrer votre recherche</th>
+</tr>
+<tr>
+<td>Matricule</td>
+<form method="post" action="rechercher.php">
+<td><input type="text" maxlength="10" name="matricule"/></td>
+</tr>
+</table>
+<div align="center">
+<br />
+<input type="submit" value="Rechercher" /></div>
+</form>
+<br />
+<div align="center">{RESULTAT}</div>
+<table class="tabRechercheResultat">
+<tr>
+<th>Matricule
+</th>
+<th>Nom
+</th>
+<th>Prenom
+</th>
+<th>Adresse
+</th>
+<th>Localité
+</th>
+<th>CP
+</th>
+</tr>
+<tr>
+<!-- BEGIN afficher -->
+<td>{afficher.matricule}</td>
+<td>{afficher.nom}</td>
+<td>{afficher.prenom}</td>
+<td>{afficher.adresse}</td>
+<td>{afficher.localite}</td>
+<td>{afficher.cp}</td>
+<!-- END afficher -->
+</tr>
+<tr>
+<th>Téléphone
+</th>
+<th>Email
+</th>
+<th>Date de naissance
+</th>
+<th>Section
+</th>
+<th>Grade
+</th>
+</tr>
+<tr>
+<!-- BEGIN afficher -->
+<td>{afficher.telephone}</td>
+<td>{afficher.email}</td>
+<td>{afficher.datenaissance}</td>
+<td>{afficher.section}</td>
+<td>{afficher.grade}</td>
+<!-- END afficher -->
+</tr>
+</table>
+</div>
+</body>
+</html>

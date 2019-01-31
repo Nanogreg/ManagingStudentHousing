@@ -1,0 +1,108 @@
+<table class="ds_box" cellpadding="0" cellspacing="0" id="ds_conclass" style="display: none;">
+<tr><td id="ds_calclass">
+</td></tr>
+</table>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="./installation/installation.css" />
+<link rel="stylesheet" type="text/css" href="./style/stylesheets/calendrier.css" />
+<SCRIPT  LANGUAGE="javascript" TYPE="text/javascript" SRC="./js/calendrier.js"></SCRIPT>
+<title>Installation de l'application MSH</title>
+</head>
+<body>
+	<br />
+<div id="style" class="form">
+  <form id="form1" name="form1" method="post" action={CHEMIN}>
+    <h1>INSTALLATION</h1>
+    <p>Veuillez remplir les informations relatives &agrave; votre installation de Mysql</p>
+    <p>les champs * sont obligatoires</p>
+    <label>*H&ocirc;te
+        <span class="small">{HOTE}</span>
+    </label>
+    <input type="text" name="hote" id="textfieldid" />
+    
+     <label>*Base de donn&eacute;e
+        <span class="small">{DBNAME}</span>
+    </label>
+    <input type="text" name="dbname" id="textfieldid" />
+
+    <label>*Nom
+             <span class="small">{UTILISATEUR}</span>
+    </label>
+    <input type="text" name="nom_user" id="textfield" />
+    
+    <label>Mot de passe 
+        <span class="small">{MOTDEPASSE}</span>
+    </label>
+    <input type="password" name="password_hote" id="textfield" />
+    
+    <p>Cr&eacute;ation du compte : Gestionnaire</p>
+
+    <label>*Matricule
+        <span class="small">{MATRICULE}</span>
+    </label>
+    <input type="text" name="matricule" id="textfield" maxlength="10"/>
+
+    <label>*Nom
+        <span class="small">{NOM}</span>
+    </label>
+    <input type="text" name="nom_gest" id="textfield" maxlength="15"/>
+
+	<label>*Pr&eacute;nom
+        <span class="small">{PRENOM}</span>
+    </label>
+    <input type="text" name="prenom_gest" id="textfield" maxlength="15"/>
+
+	<label>Email
+        <span class="small">{EMAIL}</span>
+    </label>
+    <input type="text" name="email_gest" id="textfield" maxlength="25"/>
+
+	<label>Adresse
+        <span class="small">{ADRESSE}</span>
+    </label>
+    <input type="text" name="adres_gest" id="textfield" maxlength="20"/>
+
+    <label>Localite
+        <span class="small">{LOCALITE}</span>
+    </label>
+    <input type="text" name="localite_gest" id="textfield" maxlength="20"/>
+     
+    <label>CP
+        <span class="small">{CP}</span>
+    </label>
+    <input type="text" name="cp_gest" id="textfield" maxlength="6"/>
+
+	<label>*Section
+        <span class="small">{SECTION}</span>
+    </label>
+    <input type="text" name="sect_gest" id="textfield" maxlength="4" />
+
+	<label>*T&eacute;l&eacute;phone
+        <span class="small">{TELEPHONE}</span>
+    </label>
+    <input type="text" name="tel_gest" id="textfield" maxlength="12"/>
+
+	<label>Date de naissance
+        <span class="small">{DATE}</span>
+    </label>
+    <input name="dtn_gest" id="date" onclick="ds_sh(this);" readonly="readonly" style="cursor: text"/>
+
+		<label>*Mot de passe
+        <span class="small">{MOTDEPASSE}</span>
+    </label>
+    <input type="password" name="password_gest" id="textfield" maxlength="20"/>
+    
+    <label>*Mot de passe
+        <span class="small">{MOTDEPASSE2}</span>
+    </label>
+    <input type="password" name="password_gest2" id="textfield" maxlength="20"/>
+    
+    <button type="submit">INSTALLER</button>
+    <div class="spacer"></div>
+  </form>
+</div>
+</body>
+</html>
